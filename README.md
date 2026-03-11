@@ -28,7 +28,7 @@ The dataset contains employee performance and demographic metrics. During the da
 2. **The Under-Utilized/Unsatisfied:** Working below standard hours (130–160) with moderately low satisfaction (~0.4).
 3. **The Overworked but Satisfied:** Working heavy hours (220–280) with very high satisfaction (~0.8+), indicating high-performers who might be poached by competitors.
 
-![Satisfaction vs Hours](images/burnout_scatter.jpg)
+![Satisfaction vs Hours](images/burnout_scatter.png)
 
 ### 2. Model Accuracy (Random Forest Confusion Matrix)
 *The Confusion Matrix demonstrates the model's high reliability in identifying flight-risk employees.*
