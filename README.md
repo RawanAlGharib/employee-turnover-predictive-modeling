@@ -21,22 +21,22 @@ The dataset contains employee performance and demographic metrics. During the da
 * **Evaluation Metrics:** Precision, Recall, F1-Score, and AUC-ROC, with a specific focus on Recall to ensure at-risk employees are accurately captured.
 
 ## 📂 Repository Structure
-* Data (`HR_dataset.csv`). 
-* Python script (`hr_turnover_model.py`) detailing the data cleaning, EDA, model building, and evaluation process.
-* Presentation (`hr_turnover_presentation.pdf`)detailing the model's findings and strategic HR recommendations.
-* Images (burnout_scatter.png & confusion_matrix.png).
+* `data/`: Contains the HR dataset (`.csv`). 
+* `scripts/`: Python script (`.py`) detailing the data cleaning, EDA, model building, and evaluation process.
+* `presentations/`: Executive summary detailing the model's findings and strategic HR recommendations.
+* `images/`: Saved visualizations used in the README and presentation.
 
 ## 📈 Visualizing the Problem & The Solution
 
 ### 1. The Burnout Indicator
 *The scatterplot below reveals a massive cluster of employees who left the company (orange) working over 240 hours per month with plunging satisfaction levels.*
 
-![Satisfaction vs Hours](burnout_scatter.png)
+![Satisfaction vs Hours](images/burnout_scatter.png)
 
 ### 2. Model Accuracy (Random Forest Confusion Matrix)
 *The final Random Forest model successfully predicts the vast majority of employees who are at risk of leaving, minimizing costly false negatives.*
 
-![Random Forest Confusion Matrix](confusion_matrix.png)
+![Random Forest Confusion Matrix](images/confusion_matrix.png)
 
 ## 💡 Key Insights & Recommendations
 1. **Burnout Indicator:** Employees with a high `number_project` and high `average_monthly_hours` show a significantly higher probability of leaving.
