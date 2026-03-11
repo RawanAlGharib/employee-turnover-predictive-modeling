@@ -20,25 +20,22 @@ The dataset contains employee performance and demographic metrics. During the da
 * **Models Evaluated:** Logistic Regression, Decision Trees, and Random Forest.
 * **Evaluation Metrics:** Precision, Recall, F1-Score, and AUC-ROC, with a specific focus on Recall to ensure at-risk employees are accurately captured.
 
-## 📂 Repository Structure
-* `data/`: Contains the HR dataset (`.csv`). 
-* `scripts/`: Python script (`.py`) detailing the data cleaning, EDA, model building, and evaluation process.
-* `presentations/`: Executive summary detailing the model's findings and strategic HR recommendations.
-* `images/`: Saved visualizations used in the README and presentation.
-
 ## 📈 Visualizing the Problem & The Solution
 
-### 1. The Burnout Indicator
-*The scatterplot below reveals a massive cluster of employees who left the company (orange) working over 240 hours per month with plunging satisfaction levels.*
+### 1. Distinct Attrition Clusters
+*The scatterplot below maps monthly working hours against satisfaction levels, revealing three very distinct clusters of departing employees (orange):*
+1. **The Burned-Out:** Working massively over the 166.67 standard hours (240–310+ hours) with satisfaction nearing zero (~0.1).
+2. **The Under-Utilized/Unsatisfied:** Working below standard hours (130–160) with moderately low satisfaction (~0.4).
+3. **The Overworked but Satisfied:** Working heavy hours (220–280) with very high satisfaction (~0.8+), indicating high-performers who might be poached by competitors.
 
-![Satisfaction vs Hours](images/burnout_scatter.png)
+![Satisfaction vs Hours](images/burnout_scatter.jpg)
 
 ### 2. Model Accuracy (Random Forest Confusion Matrix)
-*The final Random Forest model successfully predicts the vast majority of employees who are at risk of leaving, minimizing costly false negatives.*
+*The Confusion Matrix demonstrates the model's high reliability in identifying flight-risk employees.*
 
 ![Random Forest Confusion Matrix](images/confusion_matrix.png)
 
 ## 💡 Key Insights & Recommendations
-1. **Burnout Indicator:** Employees with a high `number_project` and high `average_monthly_hours` show a significantly higher probability of leaving.
-2. **The "Overworked & Under-Rewarded" Segment:** High-performing employees (high `last_evaluation`) with low `satisfaction_level` are a primary flight risk.
-3. **Strategic Action:** HR should implement project workload caps and review compensation/promotion structures for top performers to mitigate burnout and turnover.
+1. **Address Extreme Overwork:** The most severe flight risk comes from employees logging 240+ hours per month. HR must monitor the 166.67-hour baseline and intervene when hours begin to spike to prevent satisfaction levels from collapsing.
+2. **Investigate the "Satisfied Leavers":** A notable segment of employees leave despite reporting high satisfaction and working long hours. Management should investigate if these individuals are leaving for better compensation elsewhere after building their skills.
+3. **Deploy the Predictive Model:** The Random Forest model correctly identified 456 out of 498 departing employees (a ~91.5% recall rate), while only generating 69 false positives. HR can confidently deploy this model to generate proactive monthly "retention risk" alerts.
