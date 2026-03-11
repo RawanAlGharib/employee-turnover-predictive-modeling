@@ -31,12 +31,12 @@ The dataset contains employee performance and demographic metrics. During the da
 ### 1. The Burnout Indicator
 *The scatterplot below reveals a massive cluster of employees who left the company (orange) working over 240 hours per month with plunging satisfaction levels.*
 
-![Satisfaction vs Hours](images/burnout_scatter.png)
+![Satisfaction vs Hours](burnout_scatter.png)
 
 ### 2. Model Accuracy (Random Forest Confusion Matrix)
 *The final Random Forest model successfully predicts the vast majority of employees who are at risk of leaving, minimizing costly false negatives.*
 
-![Random Forest Confusion Matrix](images/confusion_matrix.png)
+![Random Forest Confusion Matrix](confusion_matrix.png)
 
 ## 💡 Key Insights & Recommendations
 1. **Burnout Indicator:** Employees with a high `number_project` and high `average_monthly_hours` show a significantly higher probability of leaving.
